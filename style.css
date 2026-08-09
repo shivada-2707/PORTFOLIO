@@ -485,7 +485,6 @@ header.scrolled {
     animation: fadeInScale 1s ease forwards 0.5s;
 }
 
-/* RECTANGULAR PROFILE IMAGE */
 .profile-image {
     width: 400px;
     height: 500px;
@@ -578,7 +577,6 @@ header.scrolled {
     display: inline-block;
 }
 
-/* RECTANGULAR ABOUT IMAGE */
 .about-img {
     width: 100%;
     max-width: 500px;
@@ -595,38 +593,28 @@ header.scrolled {
     box-shadow: var(--shadow-hover);
 }
 
-/* FRESHER BADGE */
 .experience-badge {
     position: absolute;
     bottom: -10px;
     right: -10px;
     background: var(--accent-gradient);
     color: var(--bg-primary);
-    min-width: 105px;
-    min-height: 105px;
-    padding: 1.2rem;
+    padding: 1.5rem;
     border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     box-shadow: var(--shadow-card);
     font-weight: 700;
 }
 
 .badge-number {
-    display: none;
+    display: block;
+    font-size: 2rem;
+    line-height: 1;
 }
 
 .badge-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.2;
-    font-weight: 700;
-}
-
-/* Hide phone contact card without affecting other contact items */
-.contact-item:has(.fa-phone) {
-    display: none;
 }
 
 .about-text {
@@ -721,7 +709,6 @@ header.scrolled {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -733,7 +720,6 @@ header.scrolled {
         opacity: 0;
         transform: scale(0.8);
     }
-
     to {
         opacity: 1;
         transform: scale(1);
@@ -744,7 +730,6 @@ header.scrolled {
     0%, 100% {
         transform: translateY(0px);
     }
-
     50% {
         transform: translateY(-20px);
     }
@@ -754,7 +739,6 @@ header.scrolled {
     0%, 100% {
         transform: translateY(0px);
     }
-
     50% {
         transform: translateY(-10px);
     }
@@ -764,7 +748,6 @@ header.scrolled {
     0%, 50% {
         opacity: 1;
     }
-
     51%, 100% {
         opacity: 0;
     }
@@ -772,15 +755,14 @@ header.scrolled {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-
     .container {
         padding: 0 1.5rem;
     }
-
+    
     .navbar {
         padding: 0 1.5rem;
     }
-
+    
     .home-content,
     .about-content {
         gap: 4rem;
@@ -788,17 +770,16 @@ header.scrolled {
 }
 
 @media (max-width: 768px) {
-
     .container {
         padding: 0 1rem;
     }
-
+    
     .navbar {
         padding: 0 1rem;
         grid-template-columns: auto auto;
         gap: 1rem;
     }
-
+    
     .nav-menu {
         position: fixed;
         top: 0;
@@ -817,149 +798,148 @@ header.scrolled {
         transition: var(--transition-smooth);
         z-index: 999;
     }
-
+    
     .nav-menu.active {
         transform: translateX(0);
     }
-
+    
     .nav-link {
         font-size: 1.5rem;
         padding: 1rem 2rem;
         text-align: center;
         width: 100%;
     }
-
+    
     .nav-cta {
         display: none;
     }
-
+    
     .hamburger {
         display: flex;
         z-index: 1000;
     }
-
+    
     .section {
         padding: 6rem 0 4rem;
         min-height: auto;
     }
-
+    
     .home {
         min-height: 100vh;
         padding: 8rem 0 4rem;
     }
-
+    
     .home-content,
     .about-content {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
     }
-
+    
     .home-image,
     .about-image {
         order: -1;
     }
-
+    
     .hero-stats {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-
+    
     .hero-actions {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-
+    
     .hire-btn {
         width: 100%;
         max-width: 250px;
         justify-content: center;
     }
-
+    
     .profile-image,
     .about-img {
         width: 300px;
         height: 400px;
     }
-
+    
     .floating-card {
         display: none;
     }
-
+    
     .section-title {
         font-size: 2.5rem;
         margin-bottom: 2rem;
     }
-
+    
     .hero-title {
         font-size: 2.8rem;
     }
-
+    
     .hero-subtitle {
         font-size: 1.5rem;
     }
-
+    
     .hero-desc {
         font-size: 1rem;
         max-width: 100%;
     }
-
+    
     .about-highlights {
         gap: 1rem;
     }
-
+    
     .highlight {
         padding: 1rem;
     }
-
+    
     .highlight:hover {
         transform: none;
     }
 }
 
 @media (max-width: 480px) {
-
     .container {
         padding: 0 0.75rem;
     }
-
+    
     .navbar {
         padding: 0 0.75rem;
     }
-
+    
     .hero-title {
         font-size: 2.5rem;
     }
-
+    
     .hero-subtitle {
         font-size: 1.3rem;
     }
-
+    
     .section-title {
         font-size: 2rem;
     }
-
+    
     .profile-image,
     .about-img {
         width: 250px;
         height: 350px;
     }
-
+    
     .social-icon {
         width: 45px;
         height: 45px;
         font-size: 1.2rem;
     }
-
+    
     .stat {
         padding: 1rem;
     }
-
+    
     .stat-number {
         font-size: 1.5rem;
     }
-
+    
     .hire-btn {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
@@ -967,19 +947,18 @@ header.scrolled {
 }
 
 @media (max-width: 320px) {
-
     .nav-brand {
         font-size: 1.5rem;
     }
-
+    
     .hero-title {
         font-size: 2.2rem;
     }
-
+    
     .section-title {
         font-size: 1.8rem;
     }
-
+    
     .profile-image,
     .about-img {
         width: 220px;
@@ -1476,7 +1455,6 @@ header.scrolled {
 
 /* Responsive Updates */
 @media (max-width: 768px) {
-
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1507,7 +1485,6 @@ header.scrolled {
 }
 
 @media (max-width: 480px) {
-
     .skill-category {
         padding: 1.5rem;
     }
