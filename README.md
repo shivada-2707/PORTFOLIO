@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my work in AI/ML, LLM applications, computer vision, and Python backend development.
 
-**Live site:** https://shivada-2707.github.io/PORTFOLIO/
+**Live site:**  https://shivada-2707.github.io/PORTFOLIO/
 *(If the link 404s, GitHub Pages hasn't been enabled yet for this repo — see [Deployment](#deployment) below.)*
 
 ---
