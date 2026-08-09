@@ -1,1557 +1,579 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Portfolio of Shivada Manoj P — AI/ML Engineer, Python Developer and MCA Graduate.">
-
     <title>Shivada Manoj P — AI/ML Engineer & Python Developer</title>
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-    <!-- CSS -->
+    <meta name="description" content="Portfolio of Shivada Manoj P — MCA graduate specializing in LLM applications, computer vision, and Python backend development.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<!-- ================= HEADER ================= -->
-
-<header id="site-header">
-
-    <nav class="navbar container">
-
-        <a href="#home" class="nav-brand">
-            Shivada<span class="brand-dot">.</span>
-        </a>
-
-        <ul class="nav-menu" id="nav-menu">
-
-            <li>
-                <a href="#home" class="nav-link active">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="#about" class="nav-link">
-                    About
-                </a>
-            </li>
-
-            <li>
-                <a href="#skills" class="nav-link">
-                    Skills
-                </a>
-            </li>
-
-            <li>
-                <a href="#service" class="nav-link">
-                    Services
-                </a>
-            </li>
-
-            <li>
-                <a href="#project" class="nav-link">
-                    Projects
-                </a>
-            </li>
-
-            <li>
-                <a href="#contact" class="nav-link">
-                    Contact
-                </a>
-            </li>
-
-        </ul>
-
-        <a href="#contact" class="cta-btn">
-            Let's Talk
-        </a>
-
-        <button
-            class="hamburger"
-            id="hamburger"
-            type="button"
-            aria-label="Open menu"
-            aria-controls="nav-menu"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-    </nav>
-
-</header>
-
-
-<!-- ================= MAIN ================= -->
-
-<main>
-
-
-<!-- ================= HOME ================= -->
-
-<section id="home" class="section home">
-
-    <div class="hero-glow hero-glow-one"></div>
-    <div class="hero-glow hero-glow-two"></div>
-
-    <div class="container">
-
-        <div class="home-content">
-
-            <!-- LEFT -->
-
-            <div class="home-text">
-
-                <div class="greeting">
-                    👋 Hi, I'm
-                </div>
-
-                <h1 class="hero-title">
-                    I'm <span class="accent">Shivada</span>
-                </h1>
-
-                <h2 class="hero-subtitle">
-                    <span id="rotating-profession"></span>
-                    <span class="cursor">|</span>
-                </h2>
-
-                <p class="hero-desc">
-                    MCA graduate specializing in applied AI/ML — building
-                    LLM-powered applications, computer vision pipelines,
-                    and backend systems in Python. I like taking a research
-                    idea and shipping it as something people can actually use,
-                    from model integration to deployment-ready APIs.
-                </p>
-
-
-                <!-- STATS -->
-
-                <div class="hero-stats">
-
-                    <div class="stat">
-                        <span class="stat-number">
-                            3
-                        </span>
-
-                        <span class="stat-label">
-                            Major Projects
-                        </span>
-                    </div>
-
-
-                    <div class="stat">
-                        <span class="stat-number">
-                            40+
-                        </span>
-
-                        <span class="stat-label">
-                            Languages Supported
-                        </span>
-                    </div>
-
-
-                    <div class="stat">
-                        <span class="stat-number">
-                            8.3
-                        </span>
-
-                        <span class="stat-label">
-                            MCA CGPA
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <!-- BUTTONS -->
-
-                <div class="hero-actions">
-
-                    <a
-                        href="#contact"
-                        class="hire-btn primary"
-                    >
-                        <span>Hire Me</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-
-
-                    <button
-                        class="hire-btn secondary"
-                        id="downloadCvBtn"
-                        type="button"
-                    >
-                        <i class="fas fa-download"></i>
-                        <span>Download CV</span>
-                    </button>
-
-                </div>
-
-
-                <!-- SOCIAL -->
-
-                <div class="social-links">
-
-                    <a
-                        href="mailto:shivadamanoj0@gmail.com"
-                        aria-label="Email"
-                        class="social-icon email"
-                    >
-                        <i class="fas fa-envelope"></i>
-                    </a>
-
-
-                    <a
-                        href="https://www.linkedin.com/in/shivada-manoj-p-082274339"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn"
-                        class="social-icon linkedin"
-                    >
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-
-
-                    <a
-                        href="https://github.com/shivada-2707"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub"
-                        class="social-icon github"
-                    >
-                        <i class="fab fa-github"></i>
-                    </a>
-
-                </div>
-
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Shivada<span class="brand-dot">.</span></div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#service" class="nav-link">Services</a></li>
+                <li><a href="#project" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#contact" class="cta-btn">Let's Talk</a>
             </div>
-
-
-            <!-- RIGHT -->
-
-            <div class="home-image">
-
-                <div class="image-container">
-
-                    <div class="image-ring"></div>
-
-                    <img
-                        src="photo.png"
-                        alt="Shivada Manoj P"
-                        class="profile-image"
-                    >
-
-
-                    <div class="floating-card card-1">
-
-                        <i class="fas fa-brain"></i>
-
-                        <span>
-                            Python &amp; LLMs
-                        </span>
-
-                    </div>
-
-
-                    <div class="floating-card card-2">
-
-                        <i class="fas fa-eye"></i>
-
-                        <span>
-                            Computer Vision
-                        </span>
-
-                    </div>
-
-
-                    <div class="floating-card card-3">
-
-                        <i class="fas fa-rocket"></i>
-
-                        <span>
-                            Ships Fast
-                        </span>
-
-                    </div>
-
-                </div>
-
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+        </nav>
+    </header>
 
+    <main>
+        <section id="home" class="section home">
+            <div class="container">
+                <div class="home-content">
+                    <div class="home-text">
+                        <div class="greeting">👋 Hi, I'm</div>
+                        <h1 class="hero-title">I'm <span class="accent">Shivada</span></h1>
+                        <h2 class="hero-subtitle" id="rotating-profession">AI/ML Engineer</h2>
+                        <p class="hero-desc">MCA graduate specializing in applied AI/ML — building LLM-powered applications, computer vision pipelines, and backend systems in Python. I like taking a research idea and shipping it as something people can actually use, from model integration to deployment-ready APIs.</p>
+
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Major Projects</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">40+</span>
+                                <span class="stat-label">Languages Supported</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">8.3</span>
+                                <span class="stat-label">MCA CGPA</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <button class="hire-btn primary">
+                                <span>Hire Me</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button class="hire-btn secondary">
+                                <i class="fas fa-download"></i>
+                                <span>Download CV</span>
+                            </button>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="mailto:shivadamanoj0@gmail.com" aria-label="Email" class="social-icon email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/shivada-manoj-p-082274339" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/shivada-2707" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="tel:+917907261106" aria-label="Phone" class="social-icon phone">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="home-image">
+                        <div class="image-container">
+                            <img src="photo.png" alt="Shivada Manoj P" class="avatar-circle">
+                            <div class="floating-card card-1">
+                                <i class="fas fa-brain"></i>
+                                <span>Python &amp; LLMs</span>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="fas fa-eye"></i>
+                                <span>Computer Vision</span>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="fas fa-rocket"></i>
+                                <span>Ships Fast</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-wrapper">
+                            <img src="photo.png" alt="Shivada Manoj P" class="avatar-square">
+                            <div class="experience-badge">
+                                <span class="badge-number">3</span>
+                                <span class="badge-text">Major<br>Projects</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="about-description">
+                            <p>I'm an MCA graduate from Government Engineering College, Thrissur, specializing in applied AI/ML. My work sits at the intersection of language models, computer vision, and backend engineering — I like taking a research idea and turning it into working software.</p>
+
+                            <p>My major project, LaTeX WriteSense AI, integrates the LLaMA3 LLM and NLLB-200 translation model behind a FastAPI microservices backend, packaged into a Chrome extension for real-time academic writing support. Before that, I built a YOLOv5 detection pipeline that improved accuracy by ~55% in foggy, low-visibility scenes.</p>
+
+                            <p>I'm currently job-seeking as a fresher, looking for Software Engineer, Python Developer, or AI/ML Engineer roles where I can keep building things that combine logic and creativity.</p>
+                        </div>
+
+                        <div class="about-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Education</h4>
+                                    <p>MCA, Government Engineering College Thrissur</p>
+                                </div>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Kerala, India</p>
+                                </div>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <h4>Focus</h4>
+                                    <p>LLM &amp; Agentic AI Engineering, Python Development</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-actions">
+                            <button class="about-btn">
+                                <span>Download CV</span>
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="section-title">Skills &amp; Expertise</h2>
+                <div class="skills-content">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>AI &amp; Machine Learning</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fas fa-brain"></i>
+                                    <span>LLM Integration (LLaMA3)</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-comment-dots"></i>
+                                    <span>Prompt Engineering</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>PyTorch &amp; OpenCV</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fab fa-python"></i>
+                                    <span>Python</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>SQL</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-html5"></i>
+                                    <span>HTML / CSS</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend &amp; APIs</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fas fa-server"></i>
+                                    <span>FastAPI</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>REST API Design</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-cubes"></i>
+                                    <span>Microservices</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Databases</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>MySQL</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span>DBMS Fundamentals</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-diagram-project"></i>
+                                    <span>Data Pipelines</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>CS Fundamentals</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fas fa-sitemap"></i>
+                                    <span>Data Structures</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-shapes"></i>
+                                    <span>OOP</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-git-alt"></i>
+                                    <span>Git</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Tools &amp; Practice</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>VS Code</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <span>Chrome Extension Dev</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Team Collaboration</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="service" class="section services">
+            <div class="container">
+                <h2 class="section-title">What I Build</h2>
+                <div class="services-content">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>LLM-Powered Applications</h3>
+                            <p>Integrating LLMs like LLaMA3 into real workflows — grammar correction, summarization, and multilingual translation across 40+ languages.</p>
+                            <div class="service-features">
+                                <span>Prompt Engineering</span>
+                                <span>LLaMA3</span>
+                                <span>NLLB-200</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Computer Vision Pipelines</h3>
+                            <p>Building detection and preprocessing pipelines — dehazing, augmentation, and model evaluation for real-world, imperfect image conditions.</p>
+                            <div class="service-features">
+                                <span>YOLOv5</span>
+                                <span>PyTorch</span>
+                                <span>OpenCV</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Backend &amp; API Development</h3>
+                            <p>Designing FastAPI microservices that process structured and unstructured data through modular, maintainable pipelines.</p>
+                            <div class="service-features">
+                                <span>FastAPI</span>
+                                <span>REST APIs</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-align-left"></i>
+                            </div>
+                            <h3>NLP &amp; Text Analysis</h3>
+                            <p>Scoring and improving text clarity using readability and lexical-density metrics, shipped end-to-end as usable tools.</p>
+                            <div class="service-features">
+                                <span>Readability Scoring</span>
+                                <span>Lexical Analysis</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Data Pipelines &amp; Databases</h3>
+                            <p>Structuring MySQL-backed data pipelines that power recommendation logic and downstream ML features.</p>
+                            <div class="service-features">
+                                <span>MySQL</span>
+                                <span>SQL</span>
+                                <span>DBMS</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Rapid Prototyping</h3>
+                            <p>Comfortable picking up new AI/ML tools and frameworks quickly to move from idea to working prototype.</p>
+                            <div class="service-features">
+                                <span>Fast Learner</span>
+                                <span>Git</span>
+                                <span>Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="project" class="section projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-content">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-visual">
+                                <i class="fas fa-file-code"></i>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://github.com/shivada-2707" target="_blank" rel="noopener" class="project-link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-kicker">MCA Major Project · 2025–2026</span>
+                                <h3>LaTeX WriteSense AI</h3>
+                                <p>An AI-powered academic writing assistant — real-time grammar correction, summarization, and translation across 40+ languages via LLaMA3 and NLLB-200, shipped as a Chrome extension.</p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>FastAPI</span>
+                                    <span>LLaMA3</span>
+                                    <span>NLLB-200</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-visual">
+                                <i class="fas fa-cloud-sun-rain"></i>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://github.com/shivada-2707" target="_blank" rel="noopener" class="project-link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-kicker">MCA Mini Project · 2024–2025</span>
+                                <h3>YOLOv5 Foggy-Scene Detection</h3>
+                                <p>A computer vision pipeline combining CLAHE and AOD-Net dehazing with YOLOv5, improving detection accuracy by ~55% in low-visibility, foggy conditions.</p>
+                                <div class="project-tech">
+                                    <span>PyTorch</span>
+                                    <span>OpenCV</span>
+                                    <span>YOLOv5</span>
+                                    <span>Flask</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-visual">
+                                <i class="fas fa-seedling"></i>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://github.com/shivada-2707" target="_blank" rel="noopener" class="project-link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-kicker">BCA Final Year · 2023–2024</span>
+                                <h3>Fresh Home</h3>
+                                <p>A smart organic farming &amp; distribution platform with a SQL-driven recommendation engine and CNN-based pest &amp; crop demand forecasting on structured data.</p>
+                                <div class="project-tech">
+                                    <span>Django</span>
+                                    <span>MySQL</span>
+                                    <span>CNN</span>
+                                    <span>Android Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>shivadamanoj0@gmail.com</p>
+                                <a href="mailto:shivadamanoj0@gmail.com">Send Email</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+91 79072 61106</p>
+                                <a href="tel:+917907261106">Call Now</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Kerala, India</p>
+                                <a href="#">Open to remote &amp; on-site roles</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <p>shivada-manoj-p</p>
+                                <a href="https://www.linkedin.com/in/shivada-manoj-p-082274339" target="_blank" rel="noopener">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder=" " required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder=" " required>
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Designed &amp; built by Shivada Manoj P — © <span id="year"></span></p>
         </div>
+    </footer>
 
-    </div>
-
-</section>
-
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about" class="section about">
-
-    <div class="container">
-
-        <div class="about-content">
-
-
-            <!-- IMAGE -->
-
-            <div class="about-image">
-
-                <div class="image-wrapper">
-
-                    <img
-                        src="photo.png"
-                        alt="Shivada Manoj P"
-                        class="about-img"
-                    >
-
-                    <div class="experience-badge">
-
-                        <span class="badge-number">
-                            3
-                        </span>
-
-                        <span class="badge-text">
-                            Major<br>
-                            Projects
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- TEXT -->
-
-            <div class="about-text">
-
-                <span class="section-eyebrow">
-                    WHO I AM
-                </span>
-
-                <h2 class="section-title left-title">
-                    About Me
-                </h2>
-
-
-                <div class="about-description">
-
-                    <p>
-                        I'm an MCA graduate from Government Engineering
-                        College, Thrissur, specializing in applied AI/ML.
-                        My work sits at the intersection of language models,
-                        computer vision, and backend engineering — I like
-                        taking a research idea and turning it into working
-                        software.
-                    </p>
-
-                    <p>
-                        My major project, LaTeX WriteSense AI, integrates
-                        the LLaMA3 LLM and NLLB-200 translation model behind
-                        a FastAPI microservices backend, packaged into a
-                        Chrome extension for real-time academic writing
-                        support.
-                    </p>
-
-                    <p>
-                        I'm currently looking for fresher opportunities as
-                        a Software Engineer, Python Developer, or AI/ML
-                        Engineer where I can keep building things that
-                        combine logic and creativity.
-                    </p>
-
-                </div>
-
-
-                <!-- HIGHLIGHTS -->
-
-                <div class="about-highlights">
-
-                    <div class="highlight">
-
-                        <i class="fas fa-graduation-cap"></i>
-
-                        <div>
-
-                            <h4>
-                                Education
-                            </h4>
-
-                            <p>
-                                MCA, Government Engineering College Thrissur
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="highlight">
-
-                        <i class="fas fa-map-marker-alt"></i>
-
-                        <div>
-
-                            <h4>
-                                Location
-                            </h4>
-
-                            <p>
-                                Kerala, India
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="highlight">
-
-                        <i class="fas fa-briefcase"></i>
-
-                        <div>
-
-                            <h4>
-                                Focus
-                            </h4>
-
-                            <p>
-                                LLM &amp; Agentic AI Engineering,
-                                Python Development
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-actions">
-
-                    <button
-                        class="about-btn"
-                        id="aboutCvBtn"
-                        type="button"
-                    >
-
-                        <span>
-                            Download CV
-                        </span>
-
-                        <i class="fas fa-download"></i>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= SKILLS ================= -->
-
-<section id="skills" class="section skills">
-
-    <div class="container">
-
-        <span class="section-eyebrow center">
-            WHAT I WORK WITH
-        </span>
-
-        <h2 class="section-title">
-            Skills &amp; Expertise
-        </h2>
-
-
-        <div class="skills-grid">
-
-
-            <!-- AI -->
-
-            <div class="skill-category">
-
-                <h3>
-                    AI &amp; Machine Learning
-                </h3>
-
-                <div class="skill-items">
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-brain"></i>
-
-                        <span>
-                            LLM Integration
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:85%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-comment-dots"></i>
-
-                        <span>
-                            Prompt Engineering
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:85%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-eye"></i>
-
-                        <span>
-                            PyTorch &amp; OpenCV
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:75%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROGRAMMING -->
-
-            <div class="skill-category">
-
-                <h3>
-                    Programming Languages
-                </h3>
-
-                <div class="skill-items">
-
-                    <div class="skill-item">
-
-                        <i class="fab fa-python"></i>
-
-                        <span>
-                            Python
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:90%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-database"></i>
-
-                        <span>
-                            SQL
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:75%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fab fa-html5"></i>
-
-                        <span>
-                            HTML / CSS
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:70%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- BACKEND -->
-
-            <div class="skill-category">
-
-                <h3>
-                    Backend &amp; APIs
-                </h3>
-
-                <div class="skill-items">
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-server"></i>
-
-                        <span>
-                            FastAPI
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:80%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-code-branch"></i>
-
-                        <span>
-                            REST API Design
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:80%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-cubes"></i>
-
-                        <span>
-                            Microservices
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:70%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- DATABASE -->
-
-            <div class="skill-category">
-
-                <h3>
-                    Databases
-                </h3>
-
-                <div class="skill-items">
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-database"></i>
-
-                        <span>
-                            MySQL
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:80%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-layer-group"></i>
-
-                        <span>
-                            DBMS Fundamentals
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:85%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-diagram-project"></i>
-
-                        <span>
-                            Data Pipelines
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:70%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- CS -->
-
-            <div class="skill-category">
-
-                <h3>
-                    CS Fundamentals
-                </h3>
-
-                <div class="skill-items">
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-sitemap"></i>
-
-                        <span>
-                            Data Structures
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:85%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-shapes"></i>
-
-                        <span>
-                            OOP
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:85%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fab fa-git-alt"></i>
-
-                        <span>
-                            Git
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:70%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- TOOLS -->
-
-            <div class="skill-category">
-
-                <h3>
-                    Tools &amp; Practice
-                </h3>
-
-                <div class="skill-items">
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-code"></i>
-
-                        <span>
-                            VS Code
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:90%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-puzzle-piece"></i>
-
-                        <span>
-                            Chrome Extension Dev
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:75%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-item">
-
-                        <i class="fas fa-users"></i>
-
-                        <span>
-                            Team Collaboration
-                        </span>
-
-                        <div class="skill-bar">
-                            <div
-                                class="skill-fill"
-                                style="width:80%"
-                            ></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= SERVICES ================= -->
-
-<section id="service" class="section services">
-
-    <div class="container">
-
-        <span class="section-eyebrow center">
-            WHAT I BUILD
-        </span>
-
-        <h2 class="section-title">
-            What I Do
-        </h2>
-
-
-        <div class="services-grid">
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-
-                <h3>
-                    LLM-Powered Applications
-                </h3>
-
-                <p>
-                    Integrating LLMs into real workflows such as grammar
-                    correction, summarization and multilingual translation.
-                </p>
-
-                <div class="service-features">
-                    <span>Prompt Engineering</span>
-                    <span>LLaMA3</span>
-                    <span>NLLB-200</span>
-                </div>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-eye"></i>
-                </div>
-
-                <h3>
-                    Computer Vision Pipelines
-                </h3>
-
-                <p>
-                    Building detection and preprocessing pipelines for
-                    real-world image conditions, including low-visibility
-                    scenes.
-                </p>
-
-                <div class="service-features">
-                    <span>YOLOv5</span>
-                    <span>PyTorch</span>
-                    <span>OpenCV</span>
-                </div>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-
-                <h3>
-                    Backend &amp; API Development
-                </h3>
-
-                <p>
-                    Designing modular FastAPI services that process
-                    structured and unstructured data through maintainable
-                    pipelines.
-                </p>
-
-                <div class="service-features">
-                    <span>FastAPI</span>
-                    <span>REST APIs</span>
-                    <span>Python</span>
-                </div>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-align-left"></i>
-                </div>
-
-                <h3>
-                    NLP &amp; Text Analysis
-                </h3>
-
-                <p>
-                    Scoring and improving text clarity using readability,
-                    lexical and structural metrics.
-                </p>
-
-                <div class="service-features">
-                    <span>Readability</span>
-                    <span>Lexical Analysis</span>
-                </div>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-
-                <h3>
-                    Data &amp; Databases
-                </h3>
-
-                <p>
-                    Working with SQL-backed data, database fundamentals
-                    and data pipelines that support application logic.
-                </p>
-
-                <div class="service-features">
-                    <span>MySQL</span>
-                    <span>SQL</span>
-                    <span>DBMS</span>
-                </div>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    <i class="fas fa-bolt"></i>
-                </div>
-
-                <h3>
-                    Rapid Prototyping
-                </h3>
-
-                <p>
-                    Quickly learning and combining new tools and frameworks
-                    to move from an idea to a working prototype.
-                </p>
-
-                <div class="service-features">
-                    <span>Fast Learner</span>
-                    <span>Git</span>
-                    <span>Problem Solving</span>
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="project" class="section projects">
-
-    <div class="container">
-
-        <span class="section-eyebrow center">
-            SELECTED WORK
-        </span>
-
-        <h2 class="section-title">
-            Featured Projects
-        </h2>
-
-
-        <div class="projects-grid">
-
-
-            <!-- PROJECT 1 -->
-
-            <article class="project-card">
-
-                <div class="project-visual">
-
-                    <div class="project-visual-icon">
-                        <i class="fas fa-file-code"></i>
-                    </div>
-
-                    <span class="project-number">
-                        01
-                    </span>
-
-                    <div class="project-overlay">
-
-                        <a
-                            href="https://github.com/shivada-2707"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="View GitHub"
-                        >
-                            <i class="fab fa-github"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-info">
-
-                    <span class="project-kicker">
-                        MCA Major Project · 2025–2026
-                    </span>
-
-                    <h3>
-                        LaTeX WriteSense AI
-                    </h3>
-
-                    <p>
-                        AI-powered academic writing support with grammar
-                        correction, summarization and translation, shipped
-                        as a Chrome extension.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>LLaMA3</span>
-                        <span>NLLB-200</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PROJECT 2 -->
-
-            <article class="project-card">
-
-                <div class="project-visual">
-
-                    <div class="project-visual-icon">
-                        <i class="fas fa-cloud-sun-rain"></i>
-                    </div>
-
-                    <span class="project-number">
-                        02
-                    </span>
-
-                    <div class="project-overlay">
-
-                        <a
-                            href="https://github.com/shivada-2707"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="View GitHub"
-                        >
-                            <i class="fab fa-github"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-info">
-
-                    <span class="project-kicker">
-                        MCA Mini Project · 2024–2025
-                    </span>
-
-                    <h3>
-                        YOLOv5 Foggy-Scene Detection
-                    </h3>
-
-                    <p>
-                        Computer vision pipeline combining CLAHE and
-                        AOD-Net dehazing with YOLOv5 for low-visibility,
-                        foggy conditions.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>PyTorch</span>
-                        <span>OpenCV</span>
-                        <span>YOLOv5</span>
-                        <span>Flask</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PROJECT 3 -->
-
-            <article class="project-card">
-
-                <div class="project-visual">
-
-                    <div class="project-visual-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-
-                    <span class="project-number">
-                        03
-                    </span>
-
-                    <div class="project-overlay">
-
-                        <a
-                            href="https://github.com/shivada-2707"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="View GitHub"
-                        >
-                            <i class="fab fa-github"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-info">
-
-                    <span class="project-kicker">
-                        BCA Final Year · 2023–2024
-                    </span>
-
-                    <h3>
-                        Fresh Home
-                    </h3>
-
-                    <p>
-                        Smart organic farming and distribution platform
-                        with SQL-driven recommendations and CNN-based
-                        forecasting.
-                    </p>
-
-                    <div class="project-tech">
-                        <span>Django</span>
-                        <span>MySQL</span>
-                        <span>CNN</span>
-                        <span>Android Studio</span>
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="section contact">
-
-    <div class="container">
-
-        <span class="section-eyebrow center">
-            LET'S CONNECT
-        </span>
-
-        <h2 class="section-title">
-            Get In Touch
-        </h2>
-
-
-        <div class="contact-content">
-
-
-            <!-- CONTACT INFO -->
-
-            <div class="contact-info">
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-
-                    <div class="contact-details">
-
-                        <h3>
-                            Email
-                        </h3>
-
-                        <p>
-                            shivadamanoj0@gmail.com
-                        </p>
-
-                        <a href="mailto:shivadamanoj0@gmail.com">
-                            Send Email
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-
-                    <div class="contact-details">
-
-                        <h3>
-                            Location
-                        </h3>
-
-                        <p>
-                            Kerala, India
-                        </p>
-
-                        <span>
-                            Open to remote &amp; on-site roles
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-
-                    <div class="contact-details">
-
-                        <h3>
-                            LinkedIn
-                        </h3>
-
-                        <p>
-                            shivada-manoj-p
-                        </p>
-
-                        <a
-                            href="https://www.linkedin.com/in/shivada-manoj-p-082274339"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            View Profile
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-
-                    <div class="contact-details">
-
-                        <h3>
-                            GitHub
-                        </h3>
-
-                        <p>
-                            shivada-2707
-                        </p>
-
-                        <a
-                            href="https://github.com/shivada-2707"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            View Projects
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- FORM -->
-
-            <div class="contact-form">
-
-                <form id="contactForm">
-
-
-                    <div class="form-group">
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder=" "
-                            autocomplete="name"
-                            required
-                        >
-
-                        <label for="name">
-                            Your Name
-                        </label>
-
-                    </div>
-
-
-
-                    <div class="form-group">
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder=" "
-                            autocomplete="email"
-                            required
-                        >
-
-                        <label for="email">
-                            Your Email
-                        </label>
-
-                    </div>
-
-
-
-                    <div class="form-group">
-
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder=" "
-                            required
-                        >
-
-                        <label for="subject">
-                            Subject
-                        </label>
-
-                    </div>
-
-
-
-                    <div class="form-group">
-
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="6"
-                            placeholder=" "
-                            required
-                        ></textarea>
-
-                        <label for="message">
-                            Your Message
-                        </label>
-
-                    </div>
-
-
-
-                    <button
-                        type="submit"
-                        class="submit-btn"
-                    >
-
-                        <span>
-                            Send Message
-                        </span>
-
-                        <i class="fas fa-paper-plane"></i>
-
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="site-footer">
-
-    <div class="container">
-
-        <p>
-            Designed &amp; built by Shivada Manoj P —
-            © <span id="year"></span>
-        </p>
-
-    </div>
-
-</footer>
-
-
-
-<!-- JAVASCRIPT -->
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
-```
