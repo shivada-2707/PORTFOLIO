@@ -1,778 +1,342 @@
-```javascript
-document.addEventListener("DOMContentLoaded", () => {
+// Portfolio JavaScript — Shivada Manoj P
+document.addEventListener('DOMContentLoaded', function() {
+    // DOM Elements
+    const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const heroSubtitle = document.getElementById('rotating-profession');
+    const ctaBtn = document.querySelector('.cta-btn');
+    const hireBtns = document.querySelectorAll('.hire-btn');
+    const aboutBtn = document.querySelector('.about-btn');
+    const socialIcons = document.querySelectorAll('.social-icon');
 
-    /* =====================================================
-       ELEMENTS
-       ===================================================== */
-
-    const header = document.getElementById("site-header");
-
-    const navMenu = document.getElementById("nav-menu");
-
-    const hamburger = document.getElementById("hamburger");
-
-    const navLinks = [
-        ...document.querySelectorAll(".nav-link")
-    ];
-
-    const professionEl =
-        document.getElementById("rotating-profession");
-
-    const contactForm =
-        document.getElementById("contactForm");
-
-    const yearEl =
-        document.getElementById("year");
-
-
-    /* =====================================================
-       TYPEWRITER
-       ===================================================== */
-
+    // Roles for typewriter effect
     const professions = [
-        "AI/ML Engineer",
-        "Python Developer",
-        "LLM Application Builder",
-        "Computer Vision Engineer"
+        'AI/ML Engineer',
+        'Python Developer',
+        'LLM Application Builder',
+        'Computer Vision Engineer'
     ];
 
+    // Typewriter Effect
     let professionIndex = 0;
-
     let charIndex = 0;
-
-    let deleting = false;
-
+    let isDeleting = false;
+    let typingSpeed = 90;
 
     function typeWriter() {
+        if (!heroSubtitle) return;
 
-        if (!professionEl) {
-            return;
-        }
+        const currentProfession = professions[professionIndex];
 
-        const currentWord =
-            professions[professionIndex];
-
-
-        /* Typing */
-
-        if (!deleting) {
-
-            professionEl.textContent =
-                currentWord.substring(
-                    0,
-                    charIndex + 1
-                );
-
-            charIndex++;
-
-
-            /* Finished word */
-
-            if (
-                charIndex ===
-                currentWord.length
-            ) {
-
-                deleting = true;
-
-                setTimeout(
-                    typeWriter,
-                    1600
-                );
-
-                return;
-            }
-
-
-            setTimeout(
-                typeWriter,
-                90
-            );
-
-        }
-
-
-        /* Deleting */
-
-        else {
-
-            professionEl.textContent =
-                currentWord.substring(
-                    0,
-                    charIndex - 1
-                );
-
+        if (isDeleting) {
+            heroSubtitle.innerHTML = currentProfession.substring(0, charIndex - 1) + '<span class="cursor">|</span>';
             charIndex--;
-
-
-            /* Finished deleting */
-
-            if (charIndex === 0) {
-
-                deleting = false;
-
-                professionIndex =
-                    (professionIndex + 1)
-                    % professions.length;
-
-                setTimeout(
-                    typeWriter,
-                    400
-                );
-
-                return;
-            }
-
-
-            setTimeout(
-                typeWriter,
-                45
-            );
-
-        }
-
-    }
-
-
-    /* =====================================================
-       MOBILE MENU
-       ===================================================== */
-
-    function closeMenu() {
-
-        navMenu.classList.remove("active");
-
-        hamburger.classList.remove("active");
-
-        hamburger.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        document.body.classList.remove(
-            "menu-open"
-        );
-
-    }
-
-
-    function toggleMenu() {
-
-        const isOpen =
-            navMenu.classList.toggle(
-                "active"
-            );
-
-        hamburger.classList.toggle(
-            "active",
-            isOpen
-        );
-
-        hamburger.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
-
-        document.body.classList.toggle(
-            "menu-open",
-            isOpen
-        );
-
-    }
-
-
-    if (hamburger) {
-
-        hamburger.addEventListener(
-            "click",
-            toggleMenu
-        );
-
-    }
-
-
-    /* Close after clicking navigation */
-
-    navLinks.forEach(link => {
-
-        link.addEventListener(
-            "click",
-            closeMenu
-        );
-
-    });
-
-
-    /* Close with Escape */
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (event.key === "Escape") {
-
-                closeMenu();
-
-            }
-
-        }
-    );
-
-
-    /* Close when clicking outside menu */
-
-    document.addEventListener(
-        "click",
-        event => {
-
-            if (
-                navMenu.classList.contains(
-                    "active"
-                ) &&
-                !navMenu.contains(
-                    event.target
-                ) &&
-                !hamburger.contains(
-                    event.target
-                )
-            ) {
-
-                closeMenu();
-
-            }
-
-        }
-    );
-
-
-    /* =====================================================
-       HEADER SCROLL EFFECT
-       ===================================================== */
-
-    function updateHeader() {
-
-        if (!header) {
-            return;
-        }
-
-        if (window.scrollY > 30) {
-
-            header.classList.add(
-                "scrolled"
-            );
-
+            typingSpeed = 45;
         } else {
-
-            header.classList.remove(
-                "scrolled"
-            );
-
+            heroSubtitle.innerHTML = currentProfession.substring(0, charIndex + 1) + '<span class="cursor">|</span>';
+            charIndex++;
+            typingSpeed = 90;
         }
 
+        if (!isDeleting && charIndex === currentProfession.length) {
+            typingSpeed = 1600; // Pause at end
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            professionIndex = (professionIndex + 1) % professions.length;
+            typingSpeed = 400; // Pause before next word
+        }
+
+        setTimeout(typeWriter, typingSpeed);
     }
 
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+        hamburger?.classList.toggle('active');
+        navMenu?.classList.toggle('active');
+        document.body.style.overflow = navMenu?.classList.contains('active') ? 'hidden' : 'auto';
+    }
 
-    window.addEventListener(
-        "scroll",
-        updateHeader,
-        {
-            passive: true
-        }
-    );
+    // Smooth Scroll Navigation
+    function smoothScroll(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href');
 
-    updateHeader();
+        if (targetId && targetId.startsWith('#')) {
+            const targetElement = document.querySelector(targetId);
 
+            if (targetElement) {
+                const headerHeight = header?.offsetHeight || 80;
+                const offsetTop = targetElement.offsetTop - headerHeight;
 
-    /* =====================================================
-       ACTIVE NAVIGATION
-       ===================================================== */
-
-    const sections = [
-        ...document.querySelectorAll(
-            "section[id]"
-        )
-    ];
-
-
-    const sectionObserver =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (
-                        !entry.isIntersecting
-                    ) {
-                        return;
-                    }
-
-
-                    const currentId =
-                        `#${entry.target.id}`;
-
-
-                    navLinks.forEach(link => {
-
-                        link.classList.toggle(
-                            "active",
-                            link.getAttribute(
-                                "href"
-                            ) === currentId
-                        );
-
-                    });
-
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
                 });
 
-            },
-            {
-                rootMargin:
-                    "-35% 0px -55% 0px",
+                if (navMenu?.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
 
-                threshold: 0
+                updateActiveNavLink(targetId);
             }
-        );
-
-
-    sections.forEach(section => {
-
-        sectionObserver.observe(
-            section
-        );
-
-    });
-
-
-    /* =====================================================
-       SCROLL ANIMATIONS
-       ===================================================== */
-
-    const animatedElements =
-        document.querySelectorAll(
-            `
-            .stat,
-            .highlight,
-            .skill-category,
-            .service-card,
-            .project-card,
-            .contact-item,
-            .contact-form
-            `
-        );
-
-
-    const animationObserver =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-
-                        animationObserver.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
-
-
-    animatedElements.forEach(element => {
-
-        animationObserver.observe(
-            element
-        );
-
-    });
-
-
-    /* =====================================================
-       NOTIFICATION
-       ===================================================== */
-
-    function showNotification(
-        message,
-        type = "info"
-    ) {
-
-        const existing =
-            document.querySelector(
-                ".notification"
-            );
-
-
-        if (existing) {
-            existing.remove();
         }
+    }
 
+    // Update Active Navigation Link
+    function updateActiveNavLink(activeId) {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === activeId) {
+                link.classList.add('active');
+            }
+        });
+    }
 
-        const notification =
-            document.createElement(
-                "div"
-            );
+    // Scroll-based Header Effects
+    function handleScroll() {
+        const scrollY = window.scrollY;
 
+        if (scrollY > 50) {
+            header?.classList.add('scrolled');
+        } else {
+            header?.classList.remove('scrolled');
+        }
+    }
 
-        notification.className =
-            `notification ${type}`;
+    // Scroll-based Active Navigation
+    function updateActiveNavFromScroll() {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.scrollY + (header?.offsetHeight || 80);
 
+        let activeSection = null;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                activeSection = section;
+            }
+        });
 
-        const icon =
-            type === "success"
-                ? "fa-circle-check"
-                : "fa-circle-info";
+        if (activeSection) {
+            updateActiveNavLink('#' + activeSection.getAttribute('id'));
+        } else if (scrollPosition < 100) {
+            updateActiveNavLink('#home');
+        }
+    }
 
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveNavFromScroll, 50);
+    });
 
+    // Intersection Observer for Animations
+    const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    function setupAnimations() {
+        const animatedElements = document.querySelectorAll(
+            '.hero-stats .stat, .about-highlights .highlight, .floating-card, .social-icon'
+        );
+
+        animatedElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            el.style.transitionDelay = `${index * 0.1}s`;
+
+            animationObserver.observe(el);
+        });
+    }
+
+    // Button ripple + click handling
+    function handleButtonClick(event) {
+        const button = event.currentTarget;
+        const ripple = document.createElement('span');
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = event.clientX - rect.left - size / 2;
+        const y = event.clientY - rect.top - size / 2;
+
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+
+        button.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+
+        if (button.classList.contains('cta-btn') || button.textContent.includes('Hire')) {
+            const contactSection = document.querySelector('#contact');
+            contactSection?.scrollIntoView({ behavior: 'smooth' });
+        } else if (button.textContent.includes('Download CV')) {
+            showNotification('Add your CV file and link it here — button is ready to wire up!', 'info');
+        }
+    }
+
+    // Notification System
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
         notification.innerHTML = `
-            <i class="fas ${icon}"></i>
+            <i class="fas fa-${type === 'error' ? 'circle-exclamation' : (type === 'success' ? 'check-circle' : 'info-circle')}"></i>
             <span>${message}</span>
         `;
 
-
-        document.body.appendChild(
-            notification
-        );
-
-
-        requestAnimationFrame(() => {
-
-            notification.classList.add(
-                "show"
-            );
-
+        Object.assign(notification.style, {
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            background: type === 'success' ? '#10b981' : (type === 'error' ? '#ef4444' : 'var(--accent-primary)'),
+            color: type === 'info' ? '#0a0a0a' : 'white',
+            padding: '1rem 1.5rem',
+            borderRadius: '12px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            zIndex: '9999',
+            maxWidth: '320px',
+            transform: 'translateX(120%)',
+            transition: 'transform 0.3s ease',
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+            fontWeight: '500'
         });
 
+        document.body.appendChild(notification);
 
         setTimeout(() => {
-
-            notification.classList.remove(
-                "show"
-            );
-
-
-            setTimeout(() => {
-
-                notification.remove();
-
-            }, 300);
-
-        }, 3200);
-
-    }
-
-
-    /* =====================================================
-       DOWNLOAD CV
-       ===================================================== */
-
-    function downloadCv() {
-
-        /*
-            Put your CV in the same folder
-            as index.html.
-
-            File name must be:
-
-            Shivada_Manoj_CV.pdf
-        */
-
-        const cvPath =
-            "Shivada_Manoj_CV.pdf";
-
-
-        const link =
-            document.createElement("a");
-
-
-        link.href = cvPath;
-
-        link.download =
-            "Shivada_Manoj_CV.pdf";
-
-
-        document.body.appendChild(
-            link
-        );
-
-
-        link.click();
-
-
-        link.remove();
-
+            notification.style.transform = 'translateX(0)';
+        }, 50);
 
         setTimeout(() => {
-
-            showNotification(
-                "If the CV did not download, add Shivada_Manoj_CV.pdf beside index.html.",
-                "info"
-            );
-
-        }, 500);
-
+            notification.style.transform = 'translateX(120%)';
+            setTimeout(() => notification.remove(), 300);
+        }, 3500);
     }
 
-
-    const downloadCvBtn =
-        document.getElementById(
-            "downloadCvBtn"
-        );
-
-
-    const aboutCvBtn =
-        document.getElementById(
-            "aboutCvBtn"
-        );
-
-
-    if (downloadCvBtn) {
-
-        downloadCvBtn.addEventListener(
-            "click",
-            downloadCv
-        );
-
+    // Keyboard Navigation
+    function handleKeyboard(event) {
+        if (event.key === 'Escape' && navMenu?.classList.contains('active')) {
+            toggleMobileMenu();
+        }
     }
 
-
-    if (aboutCvBtn) {
-
-        aboutCvBtn.addEventListener(
-            "click",
-            downloadCv
-        );
-
-    }
-
-
-    /* =====================================================
-       BUTTON RIPPLE EFFECT
-       ===================================================== */
-
-    const rippleButtons =
-        document.querySelectorAll(
-            `
-            .hire-btn,
-            .submit-btn,
-            .about-btn
-            `
-        );
-
-
-    rippleButtons.forEach(button => {
-
-        button.addEventListener(
-            "click",
-            event => {
-
-                const rect =
-                    button.getBoundingClientRect();
-
-
-                const size =
-                    Math.max(
-                        rect.width,
-                        rect.height
-                    );
-
-
-                const ripple =
-                    document.createElement(
-                        "span"
-                    );
-
-
-                ripple.className =
-                    "ripple";
-
-
-                ripple.style.width =
-                    `${size}px`;
-
-
-                ripple.style.height =
-                    `${size}px`;
-
-
-                ripple.style.left =
-                    `${
-                        event.clientX -
-                        rect.left -
-                        size / 2
-                    }px`;
-
-
-                ripple.style.top =
-                    `${
-                        event.clientY -
-                        rect.top -
-                        size / 2
-                    }px`;
-
-
-                button.appendChild(
-                    ripple
-                );
-
-
-                setTimeout(() => {
-
-                    ripple.remove();
-
-                }, 650);
-
+    // Debounced Resize Handler
+    let resizeTimeout;
+    function handleResize() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            if (window.innerWidth >= 769 && navMenu?.classList.contains('active')) {
+                toggleMobileMenu();
             }
-        );
+        }, 250);
+    }
 
+    // Initialize Active Navigation from Hash
+    function initializeActiveNav() {
+        const hash = window.location.hash || '#home';
+        updateActiveNavLink(hash);
+    }
+
+    // Event Listeners
+    hamburger?.addEventListener('click', toggleMobileMenu);
+    navLinks.forEach(link => link.addEventListener('click', smoothScroll));
+
+    [ctaBtn, ...hireBtns, aboutBtn].forEach(btn => {
+        btn?.addEventListener('click', handleButtonClick);
     });
 
+    socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.1)';
+        });
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
 
-    /* =====================================================
-       CONTACT FORM
-       ===================================================== */
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    document.addEventListener('keydown', handleKeyboard);
 
+    document.addEventListener('click', (event) => {
+        if (navMenu?.classList.contains('active') &&
+            !navMenu.contains(event.target) &&
+            !hamburger?.contains(event.target)) {
+            toggleMobileMenu();
+        }
+    });
+
+    // Contact form — opens the visitor's email client with the message pre-filled
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        contactForm.addEventListener(
-            "submit",
-            event => {
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
 
-                event.preventDefault();
-
-
-                const formData =
-                    new FormData(
-                        contactForm
-                    );
-
-
-                const name =
-                    String(
-                        formData.get(
-                            "name"
-                        ) || ""
-                    ).trim();
-
-
-                const email =
-                    String(
-                        formData.get(
-                            "email"
-                        ) || ""
-                    ).trim();
-
-
-                const subject =
-                    String(
-                        formData.get(
-                            "subject"
-                        ) || ""
-                    ).trim();
-
-
-                const message =
-                    String(
-                        formData.get(
-                            "message"
-                        ) || ""
-                    ).trim();
-
-
-                /* Validation */
-
-                if (
-                    !name ||
-                    !email ||
-                    !subject ||
-                    !message
-                ) {
-
-                    showNotification(
-                        "Please fill in all fields.",
-                        "info"
-                    );
-
-                    return;
-
-                }
-
-
-                /* Email body */
-
-                const body =
-                    `Name: ${name}\n` +
-                    `Email: ${email}\n\n` +
-                    `${message}`;
-
-
-                /* Create mailto */
-
-                const mailto =
-                    `mailto:shivadamanoj0@gmail.com` +
-                    `?subject=${encodeURIComponent(
-                        subject
-                    )}` +
-                    `&body=${encodeURIComponent(
-                        body
-                    )}`;
-
-
-                /* Open email client */
-
-                window.location.href =
-                    mailto;
-
-
-                /* Reset */
-
-                contactForm.reset();
-
-
-                showNotification(
-                    "Opening your email app...",
-                    "success"
-                );
-
+            if (!data.name || !data.email || !data.subject || !data.message) {
+                showNotification('Please fill in all fields', 'error');
+                return;
             }
-        );
 
+            const body = `From: ${data.name} (${data.email})%0D%0A%0D%0A${encodeURIComponent(data.message)}`;
+            window.location.href = `mailto:shivadamanoj0@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${body}`;
+
+            showNotification('Opening your email app to send the message...', 'success');
+            this.reset();
+        });
     }
 
+    function init() {
+        if (heroSubtitle) typeWriter();
+        setupAnimations();
+        initializeActiveNav();
+        handleScroll();
 
-    /* =====================================================
-       FOOTER YEAR
-       ===================================================== */
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    if (yearEl) {
-
-        yearEl.textContent =
-            new Date().getFullYear();
-
+        console.log('Portfolio initialized 🚀');
     }
 
+    init();
 
-    /* =====================================================
-       START TYPEWRITER
-       ===================================================== */
-
-    if (professionEl) {
-
-        typeWriter();
-
-    }
-
+    // Ripple + focus styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes ripple {
+            to { transform: scale(4); opacity: 0; }
+        }
+        button { position: relative; overflow: hidden; }
+        .nav-link:focus-visible,
+        .social-icon:focus-visible,
+        .hire-btn:focus-visible,
+        .cta-btn:focus-visible {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 2px;
+        }
+    `;
+    document.head.appendChild(style);
 });
-```
