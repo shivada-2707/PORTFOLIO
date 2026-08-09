@@ -1509,3 +1509,200 @@ header.scrolled {
         font-size: 1.2rem;
     }
 }
+/* =========================================================
+   FINAL PROFILE IMAGE FIX
+   DO NOT REMOVE
+   ========================================================= */
+
+/* HOME PROFILE IMAGE */
+.home .home-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .image-container {
+    width: 400px !important;
+    max-width: 400px !important;
+    height: 500px !important;
+    max-height: 500px !important;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.home .image-container .profile-image {
+    display: block !important;
+    width: 400px !important;
+    min-width: 400px !important;
+    max-width: 400px !important;
+
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+
+    object-fit: cover !important;
+    border-radius: 20px !important;
+    border: 3px solid var(--glass-border);
+}
+
+/* Prevent any global img rule from stretching it */
+.home .image-container img {
+    width: 400px !important;
+    height: 500px !important;
+    max-width: 400px !important;
+    min-width: 400px !important;
+    object-fit: cover !important;
+}
+
+
+/* =========================================================
+   ABOUT PROFILE IMAGE
+   ========================================================= */
+
+.about .about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .image-wrapper {
+    width: 500px !important;
+    max-width: 500px !important;
+    height: 600px !important;
+    max-height: 600px !important;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.about .image-wrapper .about-img {
+    display: block !important;
+    width: 500px !important;
+    min-width: 500px !important;
+    max-width: 500px !important;
+
+    height: 600px !important;
+    min-height: 600px !important;
+    max-height: 600px !important;
+
+    object-fit: cover !important;
+    border-radius: 20px !important;
+}
+
+
+/* =========================================================
+   FRESHER BADGE
+   ========================================================= */
+
+.experience-badge {
+    min-width: 105px;
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-badge .badge-number {
+    display: none !important;
+}
+
+.experience-badge .badge-text {
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HIDE PHONE CONTACT
+   ========================================================= */
+
+.contact-item.phone,
+.contact-item.phone-item,
+.contact-item:has(.fa-phone),
+.contact-item:has(.fa-phone-alt),
+.contact-item:has(.fa-mobile-alt) {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .home .image-container {
+        width: 300px !important;
+        max-width: 300px !important;
+        height: 400px !important;
+        max-height: 400px !important;
+    }
+
+    .home .image-container .profile-image,
+    .home .image-container img {
+        width: 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+
+        height: 400px !important;
+        min-height: 400px !important;
+        max-height: 400px !important;
+    }
+
+    .about .image-wrapper {
+        width: 300px !important;
+        max-width: 300px !important;
+        height: 400px !important;
+        max-height: 400px !important;
+    }
+
+    .about .image-wrapper .about-img {
+        width: 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+
+        height: 400px !important;
+        min-height: 400px !important;
+        max-height: 400px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .home .image-container {
+        width: 250px !important;
+        max-width: 250px !important;
+        height: 350px !important;
+        max-height: 350px !important;
+    }
+
+    .home .image-container .profile-image,
+    .home .image-container img {
+        width: 250px !important;
+        min-width: 250px !important;
+        max-width: 250px !important;
+
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+    }
+
+    .about .image-wrapper {
+        width: 250px !important;
+        max-width: 250px !important;
+        height: 350px !important;
+        max-height: 350px !important;
+    }
+
+    .about .image-wrapper .about-img {
+        width: 250px !important;
+        min-width: 250px !important;
+        max-width: 250px !important;
+
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+    }
+}
